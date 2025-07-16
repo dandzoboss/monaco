@@ -2590,39 +2590,45 @@ function setupAutosave() {
 
 			
 			monaco.editor.defineTheme('net-theme-dark', {
-				base: 'vs-dark',
-				inherit: true,
-				colors: {
-					"editor.background": '#141414', //ur background color
-				},
-				rules: [{
-						token: 'global',
-						foreground: '6699cc', // //FFFFFF
-						fontStyle: "bold"
-					},
-					{
-						token: 'keyword',
-						foreground: 'cc99cc',
-						fontStyle: "bold"
-					},
-					{
-						token: 'comment',
-						foreground: '999999'
-					},
-					{
-						token: 'number',
-						foreground: 'f99157'
-					},
-					{
-						token: 'string',
-						foreground: '99CC99'
-					},
-					{
-						token: 'Method',
-						foreground: 'ffa1dc'
-					},
-				]
-			});
+    base: 'vs-dark',
+    inherit: true,
+    colors: {
+        "editor.background": '#0A0A0A',  // almost black background (10,10,10)
+        "editor.lineHighlightBackground": "#0F0F0F",
+        "editorCursor.foreground": "#FFFFFF",
+        "editorLineNumber.foreground": "#444",
+        "editorLineNumber.activeForeground": "#ccc"
+    },
+    rules: [
+        {
+            token: 'global',
+            foreground: '6699cc',  // Light blue
+            fontStyle: "bold"
+        },
+        {
+            token: 'keyword',
+            foreground: 'c792ea',  // Soft purple
+            fontStyle: "bold"
+        },
+        {
+            token: 'comment',
+            foreground: '5c6370'   // Dim gray
+        },
+        {
+            token: 'number',
+            foreground: 'f78c6c'   // Orange-red
+        },
+        {
+            token: 'string',
+            foreground: '99cc99'   // Soft green
+        },
+        {
+            token: 'method',
+            foreground: 'ffa1dc'   // Pink
+        }
+    ]
+});
+
 
 			editor = monaco.editor.create(document.getElementById('container'), {
 				language: 'lua',
