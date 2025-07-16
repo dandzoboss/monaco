@@ -2593,41 +2593,18 @@ function setupAutosave() {
     base: 'vs-dark',
     inherit: true,
     colors: {
-        "editor.background": '#0A0A0A',  // almost black background (10,10,10)
-        "editor.lineHighlightBackground": "#0F0F0F",
-        "editorCursor.foreground": "#FFFFFF",
-        "editorLineNumber.foreground": "#444",
-        "editorLineNumber.activeForeground": "#ccc"
+        "editor.background": '#0A0A14AA',  // rgba(10,10,20,0.67) in hex with alpha
     },
     rules: [
-        {
-            token: 'global',
-            foreground: '6699cc',  // Light blue
-            fontStyle: "bold"
-        },
-        {
-            token: 'keyword',
-            foreground: 'c792ea',  // Soft purple
-            fontStyle: "bold"
-        },
-        {
-            token: 'comment',
-            foreground: '5c6370'   // Dim gray
-        },
-        {
-            token: 'number',
-            foreground: 'f78c6c'   // Orange-red
-        },
-        {
-            token: 'string',
-            foreground: '99cc99'   // Soft green
-        },
-        {
-            token: 'method',
-            foreground: 'ffa1dc'   // Pink
-        }
+        { token: 'global', foreground: '6699cc', fontStyle: "bold" },
+        { token: 'keyword', foreground: 'c792ea', fontStyle: "bold" },
+        { token: 'comment', foreground: '5c6370' },
+        { token: 'number', foreground: 'f78c6c' },
+        { token: 'string', foreground: '99cc99' },
+        { token: 'method', foreground: 'ffa1dc' }
     ]
 });
+
 
 
 			editor = monaco.editor.create(document.getElementById('container'), {
