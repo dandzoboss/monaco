@@ -2596,12 +2596,16 @@ function setupAutosave() {
         "editor.foreground": '#D0D0E0'   // lighter general text color
     },
     rules: [
-        { token: 'global', foreground: '8AB6F9', fontStyle: "bold" },    // lighter blue
-        { token: 'keyword', foreground: 'DFA1FF', fontStyle: "bold" },   // lighter purple
-        { token: 'comment', foreground: 'A0A0B0' },                      // lighter gray
-        { token: 'number', foreground: 'FFB27A' },                       // light orange
-        { token: 'string', foreground: 'A6DFAA' },                       // light green
-        { token: 'method', foreground: 'FFB7DE' }                        // light pink
+        { token: 'keyword', foreground: '569CD6', fontStyle: 'bold' },     // medium blue keywords (e.g. loadstring, game)
+        { token: 'identifier', foreground: 'A9C0FF' },                      // light blue identifiers (variable names)
+        { token: 'number', foreground: '82AAFF' },                          // bright blue numbers
+        { token: 'string', foreground: '7FC1FF' },                          // soft blue strings (URLs, "custom", etc)
+        { token: 'comment', foreground: '5C6370', fontStyle: 'italic' },   // grayish blue comments
+        { token: 'method', foreground: '9CDCFE' },                          // light blue methods (e.g. execute)
+        { token: 'operator', foreground: '82AAFF' },                        // operators in bright blue
+        { token: 'delimiter', foreground: 'A9C0FF' },                       // delimiters in light blue
+        { token: 'type', foreground: '4FC1FF' },                            // type tokens in sky blue
+        { token: 'class', foreground: '4FC1FF' }                            // classes in sky blue
     ]
 });
 
